@@ -27,7 +27,8 @@
             overflow-x: hidden;
             margin: 0;
             padding: 0;
-            padding-bottom: 70px; /* Space for footer */
+            padding-bottom: 70px;
+            /* Space for footer */
         }
 
         /* Hero Section with 3D Background */
@@ -36,9 +37,9 @@
             width: 100%;
             height: 100vh;
             background-color: #aacbff;
-            background-image: 
-                radial-gradient(circle at 20% 30%, rgba(255,255,255,0.4) 0%, transparent 25%),
-                radial-gradient(circle at 80% 70%, rgba(255,255,255,0.4) 0%, transparent 25%);
+            background-image:
+                radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.4) 0%, transparent 25%),
+                radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.4) 0%, transparent 25%);
             overflow: hidden;
             display: flex;
             justify-content: center;
@@ -93,9 +94,9 @@
             width: 100%;
             height: 100%;
             background-color: #aacbff;
-            background-image: 
-                radial-gradient(circle at 20% 30%, rgba(255,255,255,0.4) 0%, transparent 25%),
-                radial-gradient(circle at 80% 70%, rgba(255,255,255,0.4) 0%, transparent 25%);
+            background-image:
+                radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.4) 0%, transparent 25%),
+                radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.4) 0%, transparent 25%);
             z-index: 9999;
             display: none;
             justify-content: center;
@@ -112,7 +113,7 @@
             z-index: 100;
             font-size: calc(1.275rem + .3vw);
             color: #2d3748;
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
         }
 
         /* Video Wrapper with Frame */
@@ -170,7 +171,7 @@
             align-items: center;
             justify-content: center;
             transition: all 0.3s ease;
-            border: 1px solid rgba(255,255,255,0.3);
+            border: 1px solid rgba(255, 255, 255, 0.3);
         }
 
         .close-video:hover {
@@ -185,7 +186,7 @@
             font-weight: 700;
             color: #2d3748;
             margin: 20px 0;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
             position: relative;
             display: inline-block;
         }
@@ -197,7 +198,7 @@
             left: 25%;
             width: 50%;
             height: 2px;
-            background: linear-gradient(90deg, transparent, rgba(45,55,72,0.5), transparent);
+            background: linear-gradient(90deg, transparent, rgba(45, 55, 72, 0.5), transparent);
         }
 
         /* Button Styling */
@@ -228,7 +229,7 @@
             height: 100%;
             z-index: 1;
         }
-        
+
         /* Custom Countdown Styles */
         .simply-countdown {
             overflow: hidden;
@@ -238,8 +239,8 @@
             margin: 0 auto;
             width: 100%;
         }
-        
-        .simply-countdown > .simply-section {
+
+        .simply-countdown>.simply-section {
             width: 45%;
             margin: 5px;
             padding: 10px;
@@ -248,23 +249,23 @@
             align-items: center;
             justify-content: center;
         }
-        
-        .simply-countdown > .simply-section .simply-amount {
+
+        .simply-countdown>.simply-section .simply-amount {
             font-size: 2.5rem;
             line-height: 1;
         }
-        
-        .simply-countdown > .simply-section .simply-word {
+
+        .simply-countdown>.simply-section .simply-word {
             font-size: 1rem;
         }
-        
+
         /* For desktop - revert to horizontal layout */
         @media (min-width: 768px) {
             .simply-countdown {
                 flex-wrap: nowrap;
             }
-            
-            .simply-countdown > .simply-section {
+
+            .simply-countdown>.simply-section {
                 width: auto;
                 margin: 10px;
             }
@@ -339,12 +340,29 @@
         }
 
         /* Hover colors for menu items */
-        #menuUndangan:hover { color: #4a6fa5; }
-        #menuSaveDate:hover { color: #d4a59a; }
-        #menuUcapan:hover { color: #6b8c42; }
-        #menuMap:hover { color: #5678c0; }
-        #menuRSVP:hover { color: #c1666b; }
-        #menuWeddingGift:hover { color: #d4b483; }
+        #menuUndangan:hover {
+            color: #4a6fa5;
+        }
+
+        #menuSaveDate:hover {
+            color: #d4a59a;
+        }
+
+        #menuUcapan:hover {
+            color: #6b8c42;
+        }
+
+        #menuMap:hover {
+            color: #5678c0;
+        }
+
+        #menuRSVP:hover {
+            color: #c1666b;
+        }
+
+        #menuWeddingGift:hover {
+            color: #d4b483;
+        }
 
         /* Desktop styles */
         @media (min-width: 768px) {
@@ -352,7 +370,7 @@
                 font-size: 0.85rem;
                 min-width: 80px;
             }
-            
+
             .mobile-footer-item i {
                 font-size: 1.5rem;
             }
@@ -397,7 +415,7 @@
             min-width: 60px;
             padding: 10px;
             margin: 5px;
-            background: rgba(255,255,255,0.2);
+            background: rgba(255, 255, 255, 0.2);
             border-radius: 8px;
         }
 
@@ -643,7 +661,7 @@
             justify-content: center;
             margin-top: 20px;
         }
-        
+
         .pagination button {
             margin: 0 5px;
             padding: 5px 10px;
@@ -652,13 +670,13 @@
             cursor: pointer;
             border-radius: 4px;
         }
-        
+
         .pagination button.active {
             background: #aacbff;
             color: white;
             border-color: #aacbff;
         }
-        
+
         .pagination button:disabled {
             opacity: 0.5;
             cursor: not-allowed;
@@ -861,7 +879,57 @@
         }
 
         @keyframes spin {
-            to { transform: rotate(360deg); }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .couple-names {
+            font-family: "Cormorant Upright", sans-serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: #2d3748;
+            margin: 20px 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            position: relative;
+            display: inline-block;
+            background: linear-gradient(90deg, #aacbff, #ff9ff3, #feca57, #ff6b6b, #48dbfb, #1dd1a1);
+            background-size: 400% 400%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: gradientShift 8s ease infinite;
+        }
+
+        @keyframes gradientShift {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .couple-names::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 25%;
+            width: 50%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, rgba(45, 55, 72, 0.5), transparent);
+            transform: scaleX(0);
+            transform-origin: center;
+            transition: transform 0.6s ease;
+        }
+
+        .couple-names:hover::after {
+            transform: scaleX(1);
         }
     </style>
 </head>
@@ -962,12 +1030,13 @@
         <div class="ucapan-content">
             <span class="close-modal" id="closeUcapan">&times;</span>
             <h3>Ucapan Pernikahan</h3>
-            
+
             <div class="quote-container">
-                <p class="quote-text">"A great marriage is not when the 'perfect couple' comes together. It is when an imperfect couple learns to enjoy their differences."</p>
+                <p class="quote-text">"A great marriage is not when the 'perfect couple' comes together. It is when an
+                    imperfect couple learns to enjoy their differences."</p>
                 <p class="quote-author">– Dave Meurer</p>
             </div>
-            
+
             <p>Terima kasih telah menjadi bagian dari perjalanan cinta kami.</p>
         </div>
     </div>
@@ -977,15 +1046,19 @@
         <div class="save-date-content" style="width: 90%; max-width: 500px;">
             <span class="close-modal" id="closeMap">&times;</span>
             <h3 style="font-family: 'Caveat', cursive; color: #2d3748; margin-bottom: 20px;">Lokasi Acara</h3>
-            
+
             <div class="map-container">
-                <iframe class="map-image" src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d588.1789096156879!2d108.89251565954899!3d-7.378503110454285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zN8KwMjInNDIuNCJTIDEwOMKwNTMnMzMuMiJF!5e0!3m2!1sid!2sid!4v1743742226309!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe class="map-image"
+                    src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d588.1789096156879!2d108.89251565954899!3d-7.378503110454285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zN8KwMjInNDIuNCJTIDEwOMKwNTMnMzMuMiJF!5e0!3m2!1sid!2sid!4v1743742226309!5m2!1sid!2sid"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
-            
+            <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript">
+            </script>
             <a href="https://maps.app.goo.gl/mAC13gZSxHJhKWuW6" class="map-button" target="_blank">
                 Buka di Google Maps
             </a>
-            
+
             <p style="text-align: center; margin-top: 15px;">
                 <strong>Jl Raya Surusunda, Dusun Cijeruk Rt01/Rw09, Kecamatan Karangpucung, Kabupaten Cilacap</strong>
             </p>
@@ -1036,26 +1109,29 @@
         <div class="wedding-gift-content">
             <span class="close-modal" id="closeWeddingGift">&times;</span>
             <h3 style="font-family: 'Caveat', cursive; color: #2d3748; text-align: center;">Wedding Gift</h3>
-            
+
             <div class="gift-option">
                 <p>Jika Anda ingin mengirimkan hadiah fisik, Anda dapat mengirimkannya ke alamat kami:</p>
-                <p style="text-align: center;"><strong>Jl Raya Surusunda, Dusun Cijeruk Rt01/Rw09, Kecamatan Karangpucung, Kabupaten Cilacap</strong></p>
+                <p style="text-align: center;"><strong>Jl Raya Surusunda, Dusun Cijeruk Rt01/Rw09, Kecamatan
+                        Karangpucung, Kabupaten Cilacap</strong></p>
             </div>
-            
+
             <div class="bank-details">
                 <h4 style="text-align: center;">Transfer Bank</h4>
-                
+
                 <div class="bank-info">
-                    <h5><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/SeaBank.svg/330px-SeaBank.svg.png" alt="SeaBank" class="bank-logo"></h5>
+                    <h5><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/SeaBank.svg/330px-SeaBank.svg.png"
+                            alt="SeaBank" class="bank-logo"></h5>
                     <p>Atas Nama: Pita Patimah</p>
                     <div class="account-number" onclick="copyToClipboard(this, 'seaFeedback')">
                         901977458453
                     </div>
                     <div class="copy-feedback" id="seaFeedback">Nomor rekening berhasil disalin!</div>
                 </div>
-                
+
                 <div class="bank-info">
-                    <h5><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Bank_Central_Asia.svg/1200px-Bank_Central_Asia.svg.png" alt="BCA" class="bank-logo"></h5>
+                    <h5><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Bank_Central_Asia.svg/1200px-Bank_Central_Asia.svg.png"
+                            alt="BCA" class="bank-logo"></h5>
                     <p>Atas Nama: Zaenury Dhany Wibowo</p>
                     <div class="account-number" onclick="copyToClipboard(this, 'bcaFeedback')">
                         4340178241
@@ -1117,12 +1193,24 @@
             minutes: 0,
             seconds: 0,
             words: {
-                days: { root: 'hari', lambda: (root, n) => n > 1 ? root : root },
-                hours: { root: 'jam', lambda: (root, n) => n > 1 ? root : root },
-                minutes: { root: 'menit', lambda: (root, n) => n > 1 ? root : root },
-                seconds: { root: 'detik', lambda: (root, n) => n > 1 ? root : root }
+                days: {
+                    root: 'hari',
+                    lambda: (root, n) => n > 1 ? root : root
+                },
+                hours: {
+                    root: 'jam',
+                    lambda: (root, n) => n > 1 ? root : root
+                },
+                minutes: {
+                    root: 'menit',
+                    lambda: (root, n) => n > 1 ? root : root
+                },
+                seconds: {
+                    root: 'detik',
+                    lambda: (root, n) => n > 1 ? root : root
+                }
             },
-            refresh: function() {
+            refresh: function () {
                 // Reorder the elements for mobile view
                 if (window.innerWidth < 768) {
                     const countdown = document.querySelector('.simply-countdown');
@@ -1131,7 +1219,7 @@
                         const hours = countdown.children[1];
                         const minutes = countdown.children[2];
                         const seconds = countdown.children[3];
-                        
+
                         // Clear and re-add in the order we want (days, hours, minutes, seconds)
                         countdown.innerHTML = '';
                         countdown.appendChild(days);
@@ -1153,7 +1241,7 @@
         function addConfirmation(data) {
             // Cek apakah undangan dengan param yang sama sudah ada
             const existingIndex = confirmData.findIndex(item => item.param === data.param);
-            
+
             if (existingIndex >= 0) {
                 // Update data yang sudah ada
                 confirmData[existingIndex] = data;
@@ -1167,27 +1255,27 @@
         function loadMessagesWithPagination(page) {
             const messageList = document.getElementById('messageList');
             messageList.innerHTML = '<div class="loading-message">Memuat data...</div>';
-            
+
             // Gunakan data dari variabel confirmData
             const allMessages = [...confirmData];
-            
+
             if (allMessages.length > 0) {
                 const totalPages = Math.ceil(allMessages.length / itemsPerPage);
-                
+
                 // Hitung item untuk halaman saat ini
                 const startIndex = (page - 1) * itemsPerPage;
                 const endIndex = startIndex + itemsPerPage;
                 const pageMessages = allMessages.slice(startIndex, endIndex);
-                
+
                 // Tampilkan pesan
                 if (pageMessages.length > 0) {
                     messageList.innerHTML = '';
                     pageMessages.forEach(msg => {
                         const messageItem = document.createElement('div');
                         messageItem.className = 'message-item';
-                        
+
                         const statusClass = msg.attendance === "1" ? '' : 'not-attending';
-                        
+
                         messageItem.innerHTML = `
                             <div class="message-header">
                                 <span class="message-name">${msg.name}</span>
@@ -1196,10 +1284,10 @@
                             ${msg.message ? `<div class="message-text">${msg.message}</div>` : ''}
                             <div class="message-time">${formatDate(msg.timestamp)}</div>
                         `;
-                        
+
                         messageList.appendChild(messageItem);
                     });
-                    
+
                     // Tampilkan pagination
                     renderPagination(allMessages.length, page);
                 } else {
@@ -1215,7 +1303,7 @@
             const totalPages = Math.ceil(totalItems / itemsPerPage);
             const paginationContainer = document.createElement('div');
             paginationContainer.className = 'pagination';
-            
+
             // Tombol Previous
             const prevButton = document.createElement('button');
             prevButton.textContent = 'Sebelumnya';
@@ -1226,7 +1314,7 @@
                 }
             });
             paginationContainer.appendChild(prevButton);
-            
+
             // Tombol nomor halaman
             for (let i = 1; i <= totalPages; i++) {
                 const pageButton = document.createElement('button');
@@ -1239,538 +1327,546 @@
                 });
                 paginationContainer.appendChild(pageButton);
             }
-            
+
             // Tombol Next
             const nextButton = document.createElement('button');
-                nextButton.textContent = 'Selanjutnya';
-                nextButton.disabled = currentPage === totalPages;
-                nextButton.addEventListener('click', () => {
-                    if (currentPage < totalPages) {
-                        loadMessagesWithPagination(currentPage + 1);
-                    }
-                });
-                paginationContainer.appendChild(nextButton);
-                
-                // Tambahkan ke DOM
-                const oldPagination = document.querySelector('.pagination');
-                if (oldPagination) {
-                    oldPagination.remove();
+            nextButton.textContent = 'Selanjutnya';
+            nextButton.disabled = currentPage === totalPages;
+            nextButton.addEventListener('click', () => {
+                if (currentPage < totalPages) {
+                    loadMessagesWithPagination(currentPage + 1);
                 }
-                document.getElementById('messageList').after(paginationContainer);
+            });
+            paginationContainer.appendChild(nextButton);
+
+            // Tambahkan ke DOM
+            const oldPagination = document.querySelector('.pagination');
+            if (oldPagination) {
+                oldPagination.remove();
+            }
+            document.getElementById('messageList').after(paginationContainer);
+        }
+
+        // Fungsi untuk memeriksa konfirmasi user
+        function checkUserConfirmation() {
+            if (!namaParam) return;
+
+            const userConfirmation = confirmData.find(item => item.param === namaParam);
+
+            if (userConfirmation) {
+                currentUserConfirmation = userConfirmation;
+                document.getElementById('alreadyConfirmed').style.display = 'block';
+                document.getElementById('submitBtn').style.display = 'none';
+                document.getElementById('editBtn').style.display = 'block';
+
+                document.getElementById('guestAttendance').value = userConfirmation.attendance;
+                document.getElementById('guestMessage').value = userConfirmation.message || '';
+            } else {
+                document.getElementById('alreadyConfirmed').style.display = 'none';
+                document.getElementById('submitBtn').style.display = 'block';
+                document.getElementById('editBtn').style.display = 'none';
+            }
+        }
+
+        // Fungsi format tanggal
+        function formatDate(timestamp) {
+            const date = new Date(timestamp);
+            return date.toLocaleDateString('id-ID', {
+                day: 'numeric',
+                month: 'long',
+                year: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit'
+            });
+        }
+
+        // RSVP Form Submission
+        document.getElementById('rsvpForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const name = document.getElementById('guestName').value;
+            const attendance = document.getElementById('guestAttendance').value;
+            const message = document.getElementById('guestMessage').value;
+
+            if (!name || !attendance) {
+                alert('Harap isi nama dan konfirmasi kehadiran');
+                return;
             }
 
-            // Fungsi untuk memeriksa konfirmasi user
-            function checkUserConfirmation() {
-                if (!namaParam) return;
-                
-                const userConfirmation = confirmData.find(item => item.param === namaParam);
-                
-                if (userConfirmation) {
-                    currentUserConfirmation = userConfirmation;
-                    document.getElementById('alreadyConfirmed').style.display = 'block';
-                    document.getElementById('submitBtn').style.display = 'none';
-                    document.getElementById('editBtn').style.display = 'block';
-                    
-                    document.getElementById('guestAttendance').value = userConfirmation.attendance;
-                    document.getElementById('guestMessage').value = userConfirmation.message || '';
-                } else {
-                    document.getElementById('alreadyConfirmed').style.display = 'none';
-                    document.getElementById('submitBtn').style.display = 'block';
-                    document.getElementById('editBtn').style.display = 'none';
-                }
+            // Tambahkan param undangan ke data
+            const rsvpData = {
+                name: name,
+                param: namaParam || 'unknown', // Gunakan param undangan dari URL
+                attendance: attendance,
+                message: message,
+                timestamp: new Date().toISOString()
+            };
+
+            // Simpan ke dalam variabel confirmData
+            addConfirmation(rsvpData);
+
+            alert(`Terima kasih ${name} atas konfirmasi kehadiran!`);
+
+            this.reset();
+            if (namaTamu) {
+                document.getElementById('guestName').value = namaTamu;
             }
 
-            // Fungsi format tanggal
-            function formatDate(timestamp) {
-                const date = new Date(timestamp);
-                return date.toLocaleDateString('id-ID', {
-                    day: 'numeric',
-                    month: 'long',
-                    year: 'numeric',
-                    hour: '2-digit',
-                    minute: '2-digit'
-                });
+            // Muat ulang daftar pesan dengan pagination
+            loadMessagesWithPagination(1);
+            checkUserConfirmation();
+        });
+
+        // Edit Button Handler
+        document.getElementById('editBtn').addEventListener('click', function () {
+            if (currentUserConfirmation) {
+                document.getElementById('guestAttendance').value = currentUserConfirmation.attendance;
+                document.getElementById('guestMessage').value = currentUserConfirmation.message || '';
+
+                document.getElementById('submitBtn').style.display = 'block';
+                document.getElementById('editBtn').style.display = 'none';
+                document.getElementById('alreadyConfirmed').style.display = 'none';
             }
+        });
 
-            // RSVP Form Submission
-            document.getElementById('rsvpForm').addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                const name = document.getElementById('guestName').value;
-                const attendance = document.getElementById('guestAttendance').value;
-                const message = document.getElementById('guestMessage').value;
-                
-                if (!name || !attendance) {
-                    alert('Harap isi nama dan konfirmasi kehadiran');
-                    return;
-                }
-                
-                // Tambahkan param undangan ke data
-                const rsvpData = {
-                    name: name,
-                    param: namaParam || 'unknown', // Gunakan param undangan dari URL
-                    attendance: attendance,
-                    message: message,
-                    timestamp: new Date().toISOString()
-                };
-                
-                // Simpan ke dalam variabel confirmData
-                addConfirmation(rsvpData);
-                
-                alert(`Terima kasih ${name} atas konfirmasi kehadiran!`);
-                
-                this.reset();
-                if (namaTamu) {
-                    document.getElementById('guestName').value = namaTamu;
-                }
-                
-                // Muat ulang daftar pesan dengan pagination
-                loadMessagesWithPagination(1);
-                checkUserConfirmation();
-            });
+        // Video Controls
+        document.getElementById('openInvitation').addEventListener('click', function (e) {
+            e.preventDefault();
+            const videoContainer = document.getElementById('videoContainer');
+            const localVideo = document.getElementById('localVideo');
+            videoContainer.style.display = 'flex';
+            localVideo.play().catch(e => console.log("Autoplay prevented:", e));
+            document.body.style.overflow = 'hidden';
 
-            // Edit Button Handler
-            document.getElementById('editBtn').addEventListener('click', function() {
-                if (currentUserConfirmation) {
-                    document.getElementById('guestAttendance').value = currentUserConfirmation.attendance;
-                    document.getElementById('guestMessage').value = currentUserConfirmation.message || '';
-                    
-                    document.getElementById('submitBtn').style.display = 'block';
-                    document.getElementById('editBtn').style.display = 'none';
-                    document.getElementById('alreadyConfirmed').style.display = 'none';
-                }
-            });
+            // Pause music when video is opened
+            backgroundMusic.pause();
+            musicIcon.className = 'bi bi-play-fill';
+        });
 
-            // Video Controls
-            document.getElementById('openInvitation').addEventListener('click', function(e) {
-                e.preventDefault();
-                const videoContainer = document.getElementById('videoContainer');
-                const localVideo = document.getElementById('localVideo');
-                videoContainer.style.display = 'flex';
-                localVideo.play().catch(e => console.log("Autoplay prevented:", e));
-                document.body.style.overflow = 'hidden';
-                
-                // Pause music when video is opened
-                backgroundMusic.pause();
-                musicIcon.className = 'bi bi-play-fill';
-            });
+        document.getElementById('closeVideo').addEventListener('click', function () {
+            const videoContainer = document.getElementById('videoContainer');
+            const localVideo = document.getElementById('localVideo');
+            videoContainer.style.display = 'none';
+            localVideo.pause();
+            localVideo.currentTime = 0;
+            document.body.style.overflow = 'auto';
+        });
 
-            document.getElementById('closeVideo').addEventListener('click', function() {
-                const videoContainer = document.getElementById('videoContainer');
-                const localVideo = document.getElementById('localVideo');
-                videoContainer.style.display = 'none';
-                localVideo.pause();
-                localVideo.currentTime = 0;
-                document.body.style.overflow = 'auto';
-            });
+        // Mobile Menu Controls
+        document.getElementById('menuUndangan').addEventListener('click', function (e) {
+            e.preventDefault();
+            document.getElementById('openInvitation').click();
+        });
 
-            // Mobile Menu Controls
-            document.getElementById('menuUndangan').addEventListener('click', function(e) {
-                e.preventDefault();
-                document.getElementById('openInvitation').click();
-            });
+        document.getElementById('menuSaveDate').addEventListener('click', function (e) {
+            e.preventDefault();
 
-            document.getElementById('menuSaveDate').addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                document.getElementById('saveDateModal').style.display = 'flex';
-                document.body.style.overflow = 'hidden';
-            });
+            document.getElementById('saveDateModal').style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        });
 
-            document.getElementById('menuUcapan').addEventListener('click', function(e) {
-                e.preventDefault();
-                document.getElementById('ucapanModal').style.display = 'flex';
-                document.body.style.overflow = 'hidden';
-            });
-            
-            document.getElementById('menuMap').addEventListener('click', function(e) {
-                e.preventDefault();
-                document.getElementById('mapModal').style.display = 'flex';
-                document.body.style.overflow = 'hidden';
-            });
-            document.getElementById('menuRSVP').addEventListener('click', function(e) {
-                e.preventDefault();
-                document.getElementById('rsvpModal').style.display = 'flex';
-                document.body.style.overflow = 'hidden';
-                loadMessagesWithPagination(1);
-                checkUserConfirmation();
-                
-                // Pause music when RSVP modal is opened
-                backgroundMusic.pause();
-                musicIcon.className = 'bi bi-play-fill';
-            });
+        document.getElementById('menuUcapan').addEventListener('click', function (e) {
+            e.preventDefault();
+            document.getElementById('ucapanModal').style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        });
+
+        document.getElementById('menuMap').addEventListener('click', function (e) {
+            e.preventDefault();
+            document.getElementById('mapModal').style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        });
+        document.getElementById('menuRSVP').addEventListener('click', function (e) {
+            e.preventDefault();
+            document.getElementById('rsvpModal').style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+            loadMessagesWithPagination(1);
+            checkUserConfirmation();
+
+            // Pause music when RSVP modal is opened
+            backgroundMusic.pause();
+            musicIcon.className = 'bi bi-play-fill';
+        });
 
 
-            // Wedding Gift Menu Control
-            document.getElementById('menuWeddingGift').addEventListener('click', function(e) {
-                e.preventDefault();
-                document.getElementById('weddingGiftModal').style.display = 'flex';
-                document.body.style.overflow = 'hidden';
-            });
+        // Wedding Gift Menu Control
+        document.getElementById('menuWeddingGift').addEventListener('click', function (e) {
+            e.preventDefault();
+            document.getElementById('weddingGiftModal').style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        });
 
-            // Close modal handlers
-            document.getElementById('closeSaveDate').addEventListener('click', function() {
+        // Close modal handlers
+        document.getElementById('closeSaveDate').addEventListener('click', function () {
+            document.getElementById('saveDateModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        });
+
+        document.getElementById('closeUcapan').addEventListener('click', function () {
+            document.getElementById('ucapanModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        });
+
+        document.getElementById('closeMap').addEventListener('click', function () {
+            document.getElementById('mapModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        });
+
+        document.getElementById('closeRSVP').addEventListener('click', function () {
+            document.getElementById('rsvpModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        });
+
+        document.getElementById('closeWeddingGift').addEventListener('click', function () {
+            document.getElementById('weddingGiftModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        });
+
+        // Add to calendar function
+        document.getElementById('addToCalendar').addEventListener('click', function () {
+            // Create a calendar event URL
+            const startDate = new Date('2025-07-06T08:00:00');
+            const endDate = new Date('2025-07-06T12:00:00');
+
+            const title = 'Pernikahan Pita & Dhany';
+            const description = 'Resepsi pernikahan Pita & Dhany';
+            const location = 'Lokasi resepsi (sesuaikan)';
+
+            // For Google Calendar
+            const googleUrl =
+                `https://www.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(title)}&dates=${formatDateForGoogle(startDate)}/${formatDateForGoogle(endDate)}&details=${encodeURIComponent(description)}&location=${encodeURIComponent(location)}`;
+
+            // Open in new tab
+            window.open(googleUrl, '_blank');
+        });
+
+        function formatDateForGoogle(date) {
+            return date.toISOString().replace(/-|:|\.\d\d\d/g, '');
+        }
+
+        // Close modals when clicking outside content
+        window.addEventListener('click', function (e) {
+            if (e.target === document.getElementById('saveDateModal')) {
                 document.getElementById('saveDateModal').style.display = 'none';
                 document.body.style.overflow = 'auto';
-            });
-
-            document.getElementById('closeUcapan').addEventListener('click', function() {
+            }
+            if (e.target === document.getElementById('ucapanModal')) {
                 document.getElementById('ucapanModal').style.display = 'none';
                 document.body.style.overflow = 'auto';
-            });
-            
-            document.getElementById('closeMap').addEventListener('click', function() {
+            }
+            if (e.target === document.getElementById('mapModal')) {
                 document.getElementById('mapModal').style.display = 'none';
                 document.body.style.overflow = 'auto';
-            });
-
-            document.getElementById('closeRSVP').addEventListener('click', function() {
+            }
+            if (e.target === document.getElementById('rsvpModal')) {
                 document.getElementById('rsvpModal').style.display = 'none';
                 document.body.style.overflow = 'auto';
-            });
-
-            document.getElementById('closeWeddingGift').addEventListener('click', function() {
+            }
+            if (e.target === document.getElementById('weddingGiftModal')) {
                 document.getElementById('weddingGiftModal').style.display = 'none';
                 document.body.style.overflow = 'auto';
-            });
+            }
+        });
 
-            // Add to calendar function
-            document.getElementById('addToCalendar').addEventListener('click', function() {
-                // Create a calendar event URL
-                const startDate = new Date('2025-07-06T08:00:00');
-                const endDate = new Date('2025-07-06T12:00:00');
-                
-                const title = 'Pernikahan Pita & Dhany';
-                const description = 'Resepsi pernikahan Pita & Dhany';
-                const location = 'Lokasi resepsi (sesuaikan)';
-                
-                // For Google Calendar
-                const googleUrl = `https://www.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(title)}&dates=${formatDateForGoogle(startDate)}/${formatDateForGoogle(endDate)}&details=${encodeURIComponent(description)}&location=${encodeURIComponent(location)}`;
-                
-                // Open in new tab
-                window.open(googleUrl, '_blank');
-            });
+        // Handle hide/show footer saat scroll di desktop
+        let lastScrollTop = 0;
+        const footer = document.querySelector('.mobile-footer');
 
-            function formatDateForGoogle(date) {
-                return date.toISOString().replace(/-|:|\.\d\d\d/g, '');
+        window.addEventListener('scroll', function () {
+            if (window.innerWidth >= 768) {
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+                if (scrollTop > lastScrollTop) {
+                    // Scroll down
+                    footer.style.transform = 'translateY(100%)';
+                } else {
+                    // Scroll up
+                    footer.style.transform = 'translateY(0)';
+                }
+                lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+            }
+        });
+
+        // 3D Floral Particles for Hero Section
+        function initFloralParticles() {
+            const container = document.getElementById('floral-particles');
+            const scene = new THREE.Scene();
+            const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+            const renderer = new THREE.WebGLRenderer({
+                alpha: true
+            });
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            container.appendChild(renderer.domElement);
+
+            // Create floral particles
+            const particlesGeometry = new THREE.BufferGeometry();
+            const particleCount = 100;
+            const posArray = new Float32Array(particleCount * 3);
+
+            for (let i = 0; i < particleCount * 3; i++) {
+                posArray[i] = (Math.random() - 0.5) * 10;
             }
 
-            // Close modals when clicking outside content
-            window.addEventListener('click', function(e) {
-                if (e.target === document.getElementById('saveDateModal')) {
-                    document.getElementById('saveDateModal').style.display = 'none';
-                    document.body.style.overflow = 'auto';
-                }
-                if (e.target === document.getElementById('ucapanModal')) {
-                    document.getElementById('ucapanModal').style.display = 'none';
-                    document.body.style.overflow = 'auto';
-                }
-                if (e.target === document.getElementById('mapModal')) {
-                    document.getElementById('mapModal').style.display = 'none';
-                    document.body.style.overflow = 'auto';
-                }
-                if (e.target === document.getElementById('rsvpModal')) {
-                    document.getElementById('rsvpModal').style.display = 'none';
-                    document.body.style.overflow = 'auto';
-                }
-                if (e.target === document.getElementById('weddingGiftModal')) {
-                    document.getElementById('weddingGiftModal').style.display = 'none';
-                    document.body.style.overflow = 'auto';
-                }
+            particlesGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
+
+            // Floral particle material
+            const particlesMaterial = new THREE.PointsMaterial({
+                size: 0.1,
+                map: createFlowerSprite(),
+                transparent: true,
+                opacity: 0.8,
+                blending: THREE.AdditiveBlending
             });
 
-            // Handle hide/show footer saat scroll di desktop
-            let lastScrollTop = 0;
-            const footer = document.querySelector('.mobile-footer');
-            
-            window.addEventListener('scroll', function() {
-                if (window.innerWidth >= 768) {
-                    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-                    
-                    if (scrollTop > lastScrollTop) {
-                        // Scroll down
-                        footer.style.transform = 'translateY(100%)';
-                    } else {
-                        // Scroll up
-                        footer.style.transform = 'translateY(0)';
-                    }
-                    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
-                }
-            });
+            const particlesMesh = new THREE.Points(particlesGeometry, particlesMaterial);
+            scene.add(particlesMesh);
 
-            // 3D Floral Particles for Hero Section
-            function initFloralParticles() {
-                const container = document.getElementById('floral-particles');
-                const scene = new THREE.Scene();
-                const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-                const renderer = new THREE.WebGLRenderer({ alpha: true });
+            camera.position.z = 5;
+
+            // Animation
+            function animate() {
+                requestAnimationFrame(animate);
+                particlesMesh.rotation.x += 0.0005;
+                particlesMesh.rotation.y += 0.001;
+                renderer.render(scene, camera);
+            }
+            animate();
+
+            // Handle window resize
+            window.addEventListener('resize', () => {
+                camera.aspect = window.innerWidth / window.innerHeight;
+                camera.updateProjectionMatrix();
                 renderer.setSize(window.innerWidth, window.innerHeight);
-                container.appendChild(renderer.domElement);
+            });
+        }
 
-                // Create floral particles
-                const particlesGeometry = new THREE.BufferGeometry();
-                const particleCount = 100;
-                const posArray = new Float32Array(particleCount * 3);
+        // Create flower sprite for particles
+        function createFlowerSprite() {
+            const canvas = document.createElement('canvas');
+            canvas.width = 32;
+            canvas.height = 32;
+            const context = canvas.getContext('2d');
 
-                for(let i = 0; i < particleCount * 3; i++) {
-                    posArray[i] = (Math.random() - 0.5) * 10;
-                }
+            // Draw simple flower shape
+            context.fillStyle = 'rgba(255, 255, 255, 0.8)';
+            // Center
+            context.beginPath();
+            context.arc(16, 16, 3, 0, Math.PI * 2);
+            context.fill();
 
-                particlesGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
-
-                // Floral particle material
-                const particlesMaterial = new THREE.PointsMaterial({
-                    size: 0.1,
-                    map: createFlowerSprite(),
-                    transparent: true,
-                    opacity: 0.8,
-                    blending: THREE.AdditiveBlending
-                });
-
-                const particlesMesh = new THREE.Points(particlesGeometry, particlesMaterial);
-                scene.add(particlesMesh);
-
-                camera.position.z = 5;
-
-                // Animation
-                function animate() {
-                    requestAnimationFrame(animate);
-                    particlesMesh.rotation.x += 0.0005;
-                    particlesMesh.rotation.y += 0.001;
-                    renderer.render(scene, camera);
-                }
-                animate();
-
-                // Handle window resize
-                window.addEventListener('resize', () => {
-                    camera.aspect = window.innerWidth / window.innerHeight;
-                    camera.updateProjectionMatrix();
-                    renderer.setSize(window.innerWidth, window.innerHeight);
-                });
-            }
-
-            // Create flower sprite for particles
-            function createFlowerSprite() {
-                const canvas = document.createElement('canvas');
-                canvas.width = 32;
-                canvas.height = 32;
-                const context = canvas.getContext('2d');
-
-                // Draw simple flower shape
-                context.fillStyle = 'rgba(255, 255, 255, 0.8)';
-                // Center
+            // Petals
+            for (let i = 0; i < 5; i++) {
+                const angle = (i / 5) * Math.PI * 2;
+                const x = 16 + Math.cos(angle) * 8;
+                const y = 16 + Math.sin(angle) * 8;
                 context.beginPath();
-                context.arc(16, 16, 3, 0, Math.PI * 2);
+                context.arc(x, y, 4, 0, Math.PI * 2);
                 context.fill();
-                
-                // Petals
-                for(let i = 0; i < 5; i++) {
-                    const angle = (i / 5) * Math.PI * 2;
-                    const x = 16 + Math.cos(angle) * 8;
-                    const y = 16 + Math.sin(angle) * 8;
-                    context.beginPath();
-                    context.arc(x, y, 4, 0, Math.PI * 2);
-                    context.fill();
-                }
-
-                const texture = new THREE.Texture(canvas);
-                texture.needsUpdate = true;
-                return texture;
             }
 
-            // Initialize 3D effects for both sections
-            initFloralParticles();
-            
-            // Initialize 3D florals for video section (same function can be used)
-            function initVideoFlorals() {
-                const container = document.getElementById('video-florals');
-                const scene = new THREE.Scene();
-                const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-                const renderer = new THREE.WebGLRenderer({ alpha: true });
+            const texture = new THREE.Texture(canvas);
+            texture.needsUpdate = true;
+            return texture;
+        }
+
+        // Initialize 3D effects for both sections
+        initFloralParticles();
+
+        // Initialize 3D florals for video section (same function can be used)
+        function initVideoFlorals() {
+            const container = document.getElementById('video-florals');
+            const scene = new THREE.Scene();
+            const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+            const renderer = new THREE.WebGLRenderer({
+                alpha: true
+            });
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            container.appendChild(renderer.domElement);
+
+            // Create floral particles with different parameters
+            const particlesGeometry = new THREE.BufferGeometry();
+            const particleCount = 80; // Fewer particles for video section
+            const posArray = new Float32Array(particleCount * 3);
+
+            for (let i = 0; i < particleCount * 3; i++) {
+                posArray[i] = (Math.random() - 0.5) * 15; // Wider spread
+            }
+
+            particlesGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
+
+            // Different material for video section
+            const particlesMaterial = new THREE.PointsMaterial({
+                size: 0.15,
+                map: createFlowerSprite(),
+                transparent: true,
+                opacity: 0.6,
+                blending: THREE.AdditiveBlending,
+                color: 0xffffff
+            });
+
+            const particlesMesh = new THREE.Points(particlesGeometry, particlesMaterial);
+            scene.add(particlesMesh);
+
+            camera.position.z = 5;
+
+            // Slower animation for video section
+            function animate() {
+                requestAnimationFrame(animate);
+                particlesMesh.rotation.x += 0.0003;
+                particlesMesh.rotation.y += 0.0007;
+                renderer.render(scene, camera);
+            }
+            animate();
+
+            window.addEventListener('resize', () => {
+                camera.aspect = window.innerWidth / window.innerHeight;
+                camera.updateProjectionMatrix();
                 renderer.setSize(window.innerWidth, window.innerHeight);
-                container.appendChild(renderer.domElement);
-
-                // Create floral particles with different parameters
-                const particlesGeometry = new THREE.BufferGeometry();
-                const particleCount = 80; // Fewer particles for video section
-                const posArray = new Float32Array(particleCount * 3);
-
-                for(let i = 0; i < particleCount * 3; i++) {
-                    posArray[i] = (Math.random() - 0.5) * 15; // Wider spread
-                }
-
-                particlesGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
-
-                // Different material for video section
-                const particlesMaterial = new THREE.PointsMaterial({
-                    size: 0.15,
-                    map: createFlowerSprite(),
-                    transparent: true,
-                    opacity: 0.6,
-                    blending: THREE.AdditiveBlending,
-                    color: 0xffffff
-                });
-
-                const particlesMesh = new THREE.Points(particlesGeometry, particlesMaterial);
-                scene.add(particlesMesh);
-
-                camera.position.z = 5;
-
-                // Slower animation for video section
-                function animate() {
-                    requestAnimationFrame(animate);
-                    particlesMesh.rotation.x += 0.0003;
-                    particlesMesh.rotation.y += 0.0007;
-                    renderer.render(scene, camera);
-                }
-                animate();
-
-                window.addEventListener('resize', () => {
-                    camera.aspect = window.innerWidth / window.innerHeight;
-                    camera.updateProjectionMatrix();
-                    renderer.setSize(window.innerWidth, window.innerHeight);
-                });
-            }
-
-            // Initialize video florals when video container is shown
-            document.getElementById('openInvitation').addEventListener('click', function() {
-                initVideoFlorals();
             });
+        }
 
-            // Copy to clipboard function for wedding gift
-            function copyToClipboard(element, feedbackId) {
-                const text = element.textContent.trim();
-                navigator.clipboard.writeText(text).then(() => {
-                    const feedback = document.getElementById(feedbackId);
-                    feedback.style.display = 'block';
-                    setTimeout(() => {
-                        feedback.style.display = 'none';
-                    }, 2000);
-                }).catch(err => {
-                    console.error('Failed to copy text: ', err);
-                });
-            }
+        // Initialize video florals when video container is shown
+        document.getElementById('openInvitation').addEventListener('click', function () {
+            initVideoFlorals();
+        });
 
-            // Music player functionality
-            const musicToggle = document.getElementById('musicToggle');
-            const musicIcon = document.getElementById('musicIcon');
-            const backgroundMusic = document.getElementById('backgroundMusic');
-            
-            // Autoplay music when page loads
-            document.addEventListener('DOMContentLoaded', function() {
-                backgroundMusic.volume = 0.3;
-                // Try to autoplay with a user gesture
-                document.body.addEventListener('click', function initMusic() {
-                    backgroundMusic.play().then(() => {
-                        musicIcon.className = 'bi bi-pause-fill';
-                    }).catch(e => {
-                        console.log("Autoplay prevented:", e);
-                        musicIcon.className = 'bi bi-play-fill';
-                    });
-                    // Remove the event listener after first interaction
-                    document.body.removeEventListener('click', initMusic);
-                }, { once: true });
+        // Copy to clipboard function for wedding gift
+        function copyToClipboard(element, feedbackId) {
+            const text = element.textContent.trim();
+            navigator.clipboard.writeText(text).then(() => {
+                const feedback = document.getElementById(feedbackId);
+                feedback.style.display = 'block';
+                setTimeout(() => {
+                    feedback.style.display = 'none';
+                }, 2000);
+            }).catch(err => {
+                console.error('Failed to copy text: ', err);
             });
+        }
 
-            musicToggle.addEventListener('click', function() {
-                if (backgroundMusic.paused) {
-                    backgroundMusic.play();
+        // Music player functionality
+        const musicToggle = document.getElementById('musicToggle');
+        const musicIcon = document.getElementById('musicIcon');
+        const backgroundMusic = document.getElementById('backgroundMusic');
+
+        // Autoplay music when page loads
+        document.addEventListener('DOMContentLoaded', function () {
+            backgroundMusic.volume = 0.3;
+            // Try to autoplay with a user gesture
+            document.body.addEventListener('click', function initMusic() {
+                backgroundMusic.play().then(() => {
                     musicIcon.className = 'bi bi-pause-fill';
-                } else {
-                    backgroundMusic.pause();
+                }).catch(e => {
+                    console.log("Autoplay prevented:", e);
                     musicIcon.className = 'bi bi-play-fill';
-                }
+                });
+                // Remove the event listener after first interaction
+                document.body.removeEventListener('click', initMusic);
+            }, {
+                once: true
             });
+        });
 
-            // Loading screen animation
-            function animateLoadingScreen() {
-                const loadingScreen = document.getElementById('loadingScreen');
-                const curtainLeft = document.getElementById('curtainLeft');
-                const curtainRight = document.getElementById('curtainRight');
-                const loadingContent = document.getElementById('loadingContent');
-                
-                // Show content after a short delay
-                setTimeout(() => {
-                    loadingContent.style.opacity = '1';
-                }, 500);
-                
-                // Animate curtains after content is shown
-                setTimeout(() => {
-                    curtainLeft.style.transform = 'translateX(-100%) rotateY(20deg)';
-                    curtainRight.style.transform = 'translateX(100%) rotateY(-20deg)';
-                    loadingContent.style.opacity = '0';
-                }, 2500);
-                
-                // Hide loading screen after animation completes
-                setTimeout(() => {
-                    loadingScreen.style.opacity = '0';
-                    loadingScreen.style.pointerEvents = 'none';
-                }, 3500);
+        musicToggle.addEventListener('click', function () {
+            if (backgroundMusic.paused) {
+                backgroundMusic.play();
+                musicIcon.className = 'bi bi-pause-fill';
+            } else {
+                backgroundMusic.pause();
+                musicIcon.className = 'bi bi-play-fill';
             }
+        });
 
-            // Additional styling for mobile responsiveness
-            function adjustForMobile() {
-                if (window.innerWidth < 768) {
-                    // Adjust couple names font size
-                    document.querySelectorAll('.couple-names').forEach(el => {
-                        el.style.fontSize = '2.5rem';
+        // Loading screen animation
+        function animateLoadingScreen() {
+            const loadingScreen = document.getElementById('loadingScreen');
+            const curtainLeft = document.getElementById('curtainLeft');
+            const curtainRight = document.getElementById('curtainRight');
+            const loadingContent = document.getElementById('loadingContent');
+
+            // Show content after a short delay
+            setTimeout(() => {
+                loadingContent.style.opacity = '1';
+            }, 500);
+
+            // Animate curtains after content is shown
+            setTimeout(() => {
+                curtainLeft.style.transform = 'translateX(-100%) rotateY(20deg)';
+                curtainRight.style.transform = 'translateX(100%) rotateY(-20deg)';
+                loadingContent.style.opacity = '0';
+            }, 2500);
+
+            // Hide loading screen after animation completes
+            setTimeout(() => {
+                loadingScreen.style.opacity = '0';
+                loadingScreen.style.pointerEvents = 'none';
+            }, 3500);
+        }
+
+        // Additional styling for mobile responsiveness
+        function adjustForMobile() {
+            if (window.innerWidth < 768) {
+                // Adjust couple names font size
+                document.querySelectorAll('.couple-names').forEach(el => {
+                    el.style.fontSize = '2.5rem';
+                });
+
+                // Adjust guest name display
+                document.getElementById('videoGuestName').style.top = '30px';
+
+                // Ensure countdown is in 2x2 grid
+                const countdown = document.querySelector('.simply-countdown');
+                if (countdown) {
+                    countdown.style.display = 'flex';
+                    countdown.style.flexWrap = 'wrap';
+                    countdown.style.justifyContent = 'center';
+
+                    const sections = countdown.querySelectorAll('.simply-section');
+                    sections.forEach(section => {
+                        section.style.width = '45%';
+                        section.style.margin = '5px';
                     });
-                    
-                    // Adjust guest name display
-                    document.getElementById('videoGuestName').style.top = '30px';
-                    
-                    // Ensure countdown is in 2x2 grid
-                    const countdown = document.querySelector('.simply-countdown');
-                    if (countdown) {
-                        countdown.style.display = 'flex';
-                        countdown.style.flexWrap = 'wrap';
-                        countdown.style.justifyContent = 'center';
-                        
-                        const sections = countdown.querySelectorAll('.simply-section');
-                        sections.forEach(section => {
-                            section.style.width = '45%';
-                            section.style.margin = '5px';
-                        });
-                    }
-                } else {
-                    // Revert to horizontal layout for desktop
-                    const countdown = document.querySelector('.simply-countdown');
-                    if (countdown) {
-                        const sections = countdown.querySelectorAll('.simply-section');
-                        sections.forEach(section => {
-                            section.style.width = 'auto';
-                            section.style.margin = '10px';
-                        });
-                    }
+                }
+            } else {
+                // Revert to horizontal layout for desktop
+                const countdown = document.querySelector('.simply-countdown');
+                if (countdown) {
+                    const sections = countdown.querySelectorAll('.simply-section');
+                    sections.forEach(section => {
+                        section.style.width = 'auto';
+                        section.style.margin = '10px';
+                    });
                 }
             }
+        }
 
-            // Load confirmations data on page load
-            loadConfirmData();
+        // Load confirmations data on page load
+        loadConfirmData();
 
-            // Run on load and resize
-            window.addEventListener('load', function() {
-                adjustForMobile();
-                animateLoadingScreen();
-            });
-            window.addEventListener('resize', adjustForMobile);
+        // Run on load and resize
+        window.addEventListener('load', function () {
+            adjustForMobile();
+            animateLoadingScreen();
+        });
+        window.addEventListener('resize', adjustForMobile);
 
-            document.addEventListener('contextmenu', function(e) {
+        document.addEventListener('contextmenu', function (e) {
+            e.preventDefault();
+            // alert('Klik kanan dinonaktifkan!');
+        });
+
+        document.addEventListener('keydown', function (e) {
+            // Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+Shift+C, Ctrl+U, F12
+            if (
+                e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J' || e.key === 'C') ||
+                e.ctrlKey && e.key === 'u' ||
+                e.key === 'F12'
+            ) {
                 e.preventDefault();
-                // alert('Klik kanan dinonaktifkan!');
-            });
+                // alert('Shortcut dinonaktifkan!');
+            }
+        });
+    </script>
+</body>
 
-            document.addEventListener('keydown', function(e) {
-                // Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+Shift+C, Ctrl+U, F12
-                if (
-                    e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J' || e.key === 'C') ||
-                    e.ctrlKey && e.key === 'u' ||
-                    e.key === 'F12'
-                ) {
-                    e.preventDefault();
-                    // alert('Shortcut dinonaktifkan!');
-                }
-            });
-        </script>
-    </body>
-    </html>
+</html>
