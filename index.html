@@ -964,6 +964,7 @@
             <p>Akan melangsungkan resepsi pernikahan dalam:</p>
             <div class="simply-countdown"></div>
             <a href="#" class="btn btn-invitation mt-4" id="openInvitation">Lihat Undangan</a>
+            <p style="margin-top: 2rem;">Mohon maaf apabila ada kesalahan nama/gelar/alamat</p>
         </div>
     </section>
 
@@ -1146,6 +1147,80 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
     </script>
     <script>
+        // Variabel daftar undangan yang valid (format dengan spasi)
+        const validInvitations = [
+            "TAPA KURNIA CAHYANI DAN PASANGAN", "YENI ARVOLIS", "NAZILATUL KHURIYAH DAN PASANGAN", "MEISA AURA MAHARANI",
+            "INDAH YUNI KARTIKA DAN PASANGAN", "GIAN ANTIKA FIKAHATI DAN PASANGAN", "MUFATIKHATUL LAILIYA DAN PASANGAN", 
+            "NUR SYIFA DAN PASANGAN", "ARY PRASETYO DAN PASANGAN", "SONYA LOVINA ADJIE", "ADE SEPTIANA SUNARYA", 
+            "NENG SEKAR WINANGON", "SITI FATIMAH", "SANTI ANDARI", "DEWI MARETA", "ANNA GHANIYU HAKIM", "FAUZIAH", 
+            "AQMARANI WITYA FITRI", "LISYA KHALISYA", "HAMIDA LUTHFI", "AYULITA SOFYAN", "AGHNIYA RIDHA DAN PASANGAN", 
+            "ANISA APRILIANI SODIKIN", "AULIADINA PUTRI ANDAMI", "BELLA RAHMA PUTRI", "DIAN WAHYUNINGSIH", "KHAIRUNISA", 
+            "NINDA ADELLA", "ROSIANA DEWI AYU NINGTYAS EJI TRIONO", "TRI MUJILESTARI", "GUSTI AGIL SAPUTRA", "SISKA OKTAVIANI", 
+            "MAS NULI GIARSYANI", "IHFAN ADNAN MAULANA", "SEPTIAN ARI WIBOWO", "AHMAD RIZKY", "WAHYU ROKHMANA", 
+            "SLAMET INDRA KUSUMA", "MUJI ARIYANTO", "WIDI ASTUTI", "RAHMA FITRIA WIDHANTI", "EKA PURWANTI", "INDA DIANA ASTUTI", 
+            "HAJAD ADHY PUTRA", "OKVI DWI SANTRA", "MUHAMMAD FARID ALI SAFII", "NUR MARLINAH", "ARDI JAMHARI", "VANDA SHERLY AMALIA", 
+            "NURUL ELIZA IZZATULLAH", "EKO SANJAYA", "HANIF PRASETYO", "MAS WIDI WIDAYAT", "TIARA SHINTA ARIYANTI, RAVIKA LAURIA ANWAR"
+        ];
+
+        // Function untuk membersihkan dan memformat nama
+        function cleanName(name) {
+            if (!name) return null;
+            return name
+                .replace(/\+/g, ' ') // Ganti + dengan spasi
+                .trim() // Hapus spasi di awal/akhir
+                .toLowerCase() // Ubah ke huruf kecil
+                .replace(/\s+/g, ' '); // Ganti multiple spasi dengan satu spasi
+        }
+
+        // Function to validate invitation
+        function validateInvitation() {
+            const invitationParam = getUrlParameter('undangan');
+
+            // Jika parameter undangan tidak ada sama sekali
+            if (invitationParam === null) {
+                alert("Undangan tidak valid");
+                window.location.href = window.location.pathname;
+                return false;
+            }
+
+            // Jika parameter undangan kosong (ada param tapi tidak ada nilai)
+            if (invitationParam === '') {
+                alert("Undangan tidak valid");
+                window.location.href = window.location.pathname;
+                return false;
+            }
+
+            // Bersihkan dan format nama dari URL
+            const cleanedParam = cleanName(invitationParam);
+
+            // Jika setelah dibersihkan hasilnya null/undefined
+            if (!cleanedParam) {
+                alert("Undangan tidak valid");
+                window.location.href = window.location.pathname;
+                return false;
+            }
+
+            // Cek apakah ada yang cocok dalam daftar valid
+            const isValid = validInvitations.some(name => {
+                return cleanedParam === name.toLowerCase();
+            });
+
+            if (!isValid) {
+                alert("Mohon maaf, anda tidak diundang untuk acara pernikahan pita & dhany");
+                window.location.href = window.location.pathname;
+                return false;
+            }
+
+            return true;
+        }
+
+        // Function untuk menangani akses tidak valid
+        function showInvalidAccess() {
+            alert("Mohon maaf, anda tidak diundang untuk acara pernikahan pita & dhany");
+            // Redirect ke halaman utama tanpa parameter
+            window.location.href = window.location.pathname;
+        }
+
         // Variabel global
         let currentPage = 1;
         const itemsPerPage = 2; // 2 undangan per halaman
@@ -1751,6 +1826,13 @@
 
         // Autoplay music when page loads
         document.addEventListener('DOMContentLoaded', function () {
+            // Jalankan validasi undangan
+            if (!validateInvitation()) {
+                return;
+            }
+
+            // Lanjutkan inisialisasi lainnya jika valid
+            // initializePage();
             backgroundMusic.volume = 0.3;
             // Try to autoplay with a user gesture
             document.body.addEventListener('click', function initMusic() {
