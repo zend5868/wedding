@@ -964,7 +964,7 @@
             <p>Akan melangsungkan resepsi pernikahan dalam:</p>
             <div class="simply-countdown"></div>
             <a href="#" class="btn btn-invitation mt-4" id="openInvitation">Lihat Undangan</a>
-            <p style="margin-top: 2rem;">Mohon maaf apabila ada kesalahan nama/gelar/alamat</p>
+            <p style="margin-top: 2rem;">Mohon maaf apabila ada kesalahan nama</p>
         </div>
     </section>
 
@@ -1001,10 +1001,10 @@
                 <i class="bi bi-map"></i>
                 <span>Map</span>
             </a>
-            <a href="#" class="mobile-footer-item" id="menuRSVP">
+            <!-- <a href="#" class="mobile-footer-item" id="menuRSVP">
                 <i class="bi bi-envelope-paper-heart"></i>
                 <span>RSVP</span>
-            </a>
+            </a> -->
             <a href="#" class="mobile-footer-item" id="menuWeddingGift">
                 <i class="bi bi-gift"></i>
                 <span>Wedding Gift</span>
@@ -1038,7 +1038,7 @@
                 <p class="quote-author">– Dave Meurer</p>
             </div>
 
-            <p>Terima kasih telah menjadi bagian dari perjalanan cinta kami.</p>
+            <!-- <p>Terima kasih telah menjadi bagian dari perjalanan cinta kami.</p> -->
         </div>
     </div>
 
@@ -1184,7 +1184,7 @@
 
         // Function to validate invitation
         function validateInvitation() {
-            const invitationParam = getUrlParameter('undangan');
+            const invitationParam = getUrlParameter('to');
 
             // Jika parameter undangan tidak ada sama sekali
             if (invitationParam === null) {
@@ -1258,13 +1258,13 @@
 
         // Get and display guest name
         const urlParams = new URLSearchParams(window.location.search);
-        const namaParam = urlParams.get('undangan');
+        const namaParam = urlParams.get('to');
         const namaTamu = formatNameFromParameter(namaParam);
 
         if (namaTamu) {
-            document.getElementById('greeting-text').textContent = `Kepada ${namaTamu},`;
+            document.getElementById('greeting-text').textContent = `Kepada yth. ${namaTamu},`;
             document.getElementById('videoGuestName').textContent = `Undangan ${namaTamu}`;
-            document.title = `Undangan Pernikahan Pita & Dhany - ${namaTamu}`;
+            document.title = `The Wedding of Pita & Dhany - ${namaTamu}`;
             // Set guest name in RSVP form if available
             document.getElementById('guestName').value = namaTamu;
         }
@@ -1561,17 +1561,17 @@
             document.getElementById('mapModal').style.display = 'flex';
             document.body.style.overflow = 'hidden';
         });
-        document.getElementById('menuRSVP').addEventListener('click', function (e) {
-            e.preventDefault();
-            document.getElementById('rsvpModal').style.display = 'flex';
-            document.body.style.overflow = 'hidden';
-            loadMessagesWithPagination(1);
-            checkUserConfirmation();
+        // document.getElementById('menuRSVP').addEventListener('click', function (e) {
+        //     e.preventDefault();
+        //     document.getElementById('rsvpModal').style.display = 'flex';
+        //     document.body.style.overflow = 'hidden';
+        //     loadMessagesWithPagination(1);
+        //     checkUserConfirmation();
 
-            // Pause music when RSVP modal is opened
-            backgroundMusic.pause();
-            musicIcon.className = 'bi bi-play-fill';
-        });
+        //     // Pause music when RSVP modal is opened
+        //     backgroundMusic.pause();
+        //     musicIcon.className = 'bi bi-play-fill';
+        // });
 
 
         // Wedding Gift Menu Control
