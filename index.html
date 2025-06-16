@@ -5,6 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Pita & Dhany Wedding</title>
+    <link rel="icon" href="assets/icon.png" type="image/png">
+    <link rel="apple-touch-icon" href="assets/icon.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -964,7 +966,7 @@
             <p>Akan melangsungkan resepsi pernikahan dalam:</p>
             <div class="simply-countdown"></div>
             <a href="#" class="btn btn-invitation mt-4" id="openInvitation">Lihat Undangan</a>
-            <p style="margin-top: 2rem;">Mohon maaf apabila ada kesalahan nama</p>
+            <p style="margin-top: 2rem;">Mohon maaf apabila ada kesalahan nama/gelar</p>
         </div>
     </section>
 
@@ -1001,10 +1003,10 @@
                 <i class="bi bi-map"></i>
                 <span>Map</span>
             </a>
-            <!-- <a href="#" class="mobile-footer-item" id="menuRSVP">
+            <a href="#" class="mobile-footer-item" id="menuRSVP">
                 <i class="bi bi-envelope-paper-heart"></i>
                 <span>RSVP</span>
-            </a> -->
+            </a>
             <a href="#" class="mobile-footer-item" id="menuWeddingGift">
                 <i class="bi bi-gift"></i>
                 <span>Wedding Gift</span>
@@ -1038,10 +1040,13 @@
                 <p class="quote-author">– Dave Meurer</p>
             </div>
 
-            <p>Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu kepada kami.</p>
+            <p>Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir dan
+                memberikan doa restu kepada kami.</p>
             <h5 class="mb-3">وَبَارَكَ اللَّهُ لَك وَبَارَكَ عَلَيْك وَجَمَعَ بَيْنَكُمَا فِي خَيْرٍ</h5>
             <p class="mb-4">
-                <em>“Semoga Allah memberkahimu dalam suka dan duka, serta senantiasa menghimpun kalian berdua dalam kebaikan.”</em>
+                <em>"
+                    Semoga Allah memberkahimu dalam suka dan duka, serta senantiasa menghimpun kalian berdua dalam
+                    kebaikan."</em>
             </p>
             <h3 class="mb-0">وَالسَّلَامُ عَلَيْكُمْ وَرَحْمَةُ ٱللّٰهِ وَبَرَكَاتُهُ</h3>
             <p class="mt-4">Kami yang berbahagia,</p>
@@ -1155,28 +1160,286 @@
     </script>
     <script>
         // Variabel daftar undangan yang valid (format dengan spasi)
-        const validInvitations = [
-            "TAPA KURNIA CAHYANI DAN PASANGAN", "YENI ARVOLIS", "NAZILATUL KHURIYAH DAN PASANGAN",
-            "MEISA AURA MAHARANI",
-            "INDAH YUNI KARTIKA DAN PASANGAN", "GIAN ANTIKA FIKAHATI DAN PASANGAN",
-            "MUFATIKHATUL LAILIYA DAN PASANGAN",
-            "NUR SYIFA DAN PASANGAN", "ARY PRASETYO DAN PASANGAN", "SONYA LOVINA ADJIE", "ADE SEPTIANA SUNARYA",
-            "NENG SEKAR WINANGON", "SITI FATIMAH", "SANTI ANDARI", "DEWI MARETA", "ANNA GHANIYU HAKIM", "FAUZIAH",
-            "AQMARANI WITYA FITRI", "LISYA KHALISYA", "HAMIDA LUTHFI", "AYULITA SOFYAN",
-            "AGHNIYA RIDHA DAN PASANGAN",
-            "ANISA APRILIANI SODIKIN", "AULIADINA PUTRI ANDAMI", "BELLA RAHMA PUTRI", "DIAN WAHYUNINGSIH",
-            "KHAIRUNISA",
-            "NINDA ADELLA", "ROSIANA DEWI AYU NINGTYAS", "EJI TRIONO", "TRI MUJILESTARI", "GUSTI AGIL SAPUTRA",
-            "SISKA OKTAVIANI",
-            "MAS NULI GIARSYANI", "IHFAN ADNAN MAULANA", "SEPTIAN ARI WIBOWO", "AHMAD RIZKY", "WAHYU ROKHMANA",
-            "Tia Purniasih",
-            "SLAMET INDRA KUSUMA", "MUJI ARIYANTO", "WIDI ASTUTI", "RAHMA FITRIA WIDHANTI", "EKA PURWANTI",
-            "INDA DIANA ASTUTI",
-            "HAJAD ADHY PUTRA", "OKVI DWI SANTRA", "MUHAMMAD FARID ALI SAFII", "NUR MARLINAH", "ARDI JAMHARI",
-            "VANDA SHERLY AMALIA",
-            "NURUL ELIZA IZZATULLAH", "EKO SANJAYA", "HANIF PRASETYO", "MAS WIDI WIDAYAT",
-            "TIARA SHINTA ARIYANTI, RAVIKA LAURIA ANWAR",
-            "SAFRIL SIDIK", "Nugraheni Putri Utami"
+        const validInvitations = [{
+                "nama": "Tapa Kurnia Cahyani Dan Pasangan",
+                "panggilan": "kurniacahyani"
+            },
+            {
+                "nama": "Yeni Arvolis",
+                "panggilan": "yeni_arvolis"
+            },
+            {
+                "nama": "Nazilatul Khuriyah Dan Pasangan",
+                "panggilan": "nazilakhuriyah"
+            },
+            {
+                "nama": "Meisa Aura Maharani",
+                "panggilan": "meisamaharani"
+            },
+            {
+                "nama": "Indah Yuni Kartika Dan Pasangan",
+                "panggilan": "indahkartika"
+            },
+            {
+                "nama": "Gian Antika Fikahati Dan Pasangan",
+                "panggilan": "gianfikahati"
+            },
+            {
+                "nama": "Mufatikhatul Lailiya Dan Pasangan",
+                "panggilan": "mufatilailiya"
+            },
+            {
+                "nama": "Nur Syifa Dan Pasangan",
+                "panggilan": "nursyifa"
+            },
+            {
+                "nama": "Ary Prasetyo Dan Pasangan",
+                "panggilan": "aryprasetyo"
+            },
+            {
+                "nama": "Sonya Lovina Adjie",
+                "panggilan": "sonyaadjie"
+            },
+            {
+                "nama": "Ade Septiana Sunarya",
+                "panggilan": "adesunarya"
+            },
+            {
+                "nama": "Neng Sekar Winangon",
+                "panggilan": "nengwinangon"
+            },
+            {
+                "nama": "Siti Fatimah",
+                "panggilan": "sitifatimah"
+            },
+            {
+                "nama": "Santi Andari",
+                "panggilan": "santiandari"
+            },
+            {
+                "nama": "Dewi Mareta",
+                "panggilan": "dewimareta"
+            },
+            {
+                "nama": "Anna Ghaniyu Hakim",
+                "panggilan": "annahakim"
+            },
+            {
+                "nama": "Fauziah",
+                "panggilan": "fauziah"
+            },
+            {
+                "nama": "Aqmarani Witya Fitri",
+                "panggilan": "aqmaranifitri"
+            },
+            {
+                "nama": "Lisya Khalisya",
+                "panggilan": "lisyakhalisya"
+            },
+            {
+                "nama": "Hamida Luthfi",
+                "panggilan": "hamidaluthfi"
+            },
+            {
+                "nama": "Ayulita Sofyan",
+                "panggilan": "ayulitasofyan"
+            },
+            {
+                "nama": "Aghniya Ridha Dan Pasangan",
+                "panggilan": "aghniyaridha"
+            },
+            {
+                "nama": "Anisa Apriliani Sodikin",
+                "panggilan": "anisasodikin"
+            },
+            {
+                "nama": "Auliadina Putri Andami",
+                "panggilan": "auliadinaputri"
+            },
+            {
+                "nama": "Bella Rahma Putri",
+                "panggilan": "bellarahma"
+            },
+            {
+                "nama": "Dian Wahyuningsih",
+                "panggilan": "dianwahyuni"
+            },
+            {
+                "nama": "Khairunisa",
+                "panggilan": "khairunisa"
+            },
+            {
+                "nama": "Siti Sarah",
+                "panggilan": "sitisarah"
+            },
+            {
+                "nama": "Endah Lestari",
+                "panggilan": "endahlestari"
+            },
+            {
+                "nama": "Ninda Adella",
+                "panggilan": "nindaadella"
+            },
+            {
+                "nama": "Rosiana Dewi Ayu Ningtyas",
+                "panggilan": "rosiananingtyas"
+            },
+            {
+                "nama": "Eji Triono",
+                "panggilan": "ejitriono"
+            },
+            {
+                "nama": "Tri Mujilestari",
+                "panggilan": "trimujilestari"
+            },
+            {
+                "nama": "Gusti Agil Saputra",
+                "panggilan": "gustisaputra"
+            },
+            {
+                "nama": "Siska Oktaviani",
+                "panggilan": "siskaoktaviani"
+            },
+            {
+                "nama": "Mas Nuli Giarsyani",
+                "panggilan": "nuligiarsyani"
+            },
+            {
+                "nama": "Ihfan Adnan Maulana",
+                "panggilan": "ihfanmaulana"
+            },
+            {
+                "nama": "Septian Ari Wibowo, S.Kom",
+                "panggilan": "septianwibowo"
+            },
+            {
+                "nama": "Ahmad Rizky, S.Kom",
+                "panggilan": "ahmadrizky"
+            },
+            {
+                "nama": "Wahyu Rokhmana",
+                "panggilan": "wahyurokhmana"
+            },
+            {
+                "nama": "Tia Purniasih",
+                "panggilan": "tiapurniasih"
+            },
+            {
+                "nama": "Slamet Indra Kusuma, S.Kom",
+                "panggilan": "slametkusuma"
+            },
+            {
+                "nama": "Muji Ariyanto",
+                "panggilan": "mujiariyanto"
+            },
+            {
+                "nama": "Widi Astuti",
+                "panggilan": "widiastuti"
+            },
+            {
+                "nama": "Rahma Fitria Widhanti",
+                "panggilan": "rahmawidhanti"
+            },
+            {
+                "nama": "Eka Purwanti",
+                "panggilan": "ekapurwanti"
+            },
+            {
+                "nama": "Inda Diana Astuti",
+                "panggilan": "indaastuti"
+            },
+            {
+                "nama": "Hajad Adhy Putra, S.T",
+                "panggilan": "hajadputra"
+            },
+            {
+                "nama": "Okvi Dwi Santra, Amd.T",
+                "panggilan": "okvisantra"
+            },
+            {
+                "nama": "Muhammad Farid Ali Safii, S.Kom",
+                "panggilan": "faridsafii"
+            },
+            {
+                "nama": "Nur Marlinah",
+                "panggilan": "marlinahnur"
+            },
+            {
+                "nama": "Ardi Jamhari",
+                "panggilan": "ardijamhari"
+            },
+            {
+                "nama": "Vanda Sherly Amalia",
+                "panggilan": "vandaamalia"
+            },
+            {
+                "nama": "Nurul Eliza Izzatullah",
+                "panggilan": "nuruleliza"
+            },
+            {
+                "nama": "Eko Sanjaya",
+                "panggilan": "ekosanjaya"
+            },
+            {
+                "nama": "Hanif Prasetyo",
+                "panggilan": "hanifprasetyo"
+            },
+            {
+                "nama": "Mas Widi Widayat",
+                "panggilan": "widiwidayat"
+            },
+            {
+                "nama": "Tiara Shinta Ariyanti",
+                "panggilan": "tiaraariyanti"
+            },
+            {
+                "nama": "Safril Sidik",
+                "panggilan": "safrilsidik"
+            },
+            {
+                "nama": "Nugraheni Putri Utami",
+                "panggilan": "nugraheniputri"
+            },
+            {
+                "nama": "Ravika Lauria Anwar",
+                "panggilan": "ravikalauria"
+            },
+            {
+                "nama": "Nabila Ramadhanty",
+                "panggilan": "nabilapoli"
+            },
+            {
+                "nama": "Winda Ratnasari",
+                "panggilan": "windapoli"
+            },
+            {
+                "nama": "Cantika Nurmeilani",
+                "panggilan": "cantikapoli"
+            },
+            {
+                "nama": "Sukma Apriliani",
+                "panggilan": "sukmapoli"
+            },
+            {
+                "nama": "Dwi Roro Anggraeni",
+                "panggilan": "roropoli"
+            },
+            {
+                "nama": "Elmira Astri Safitri",
+                "panggilan": "elmirapoli"
+            },
+            {
+                "nama": "Windi Eri Yanti",
+                "panggilan": "windipoli"
+            },
+            {
+                "nama": "Mila Fitri Alvionita",
+                "panggilan": "milapoli"
+            },
+            {
+                "nama": "Tutut Sri Lestanti Nugeraheni",
+                "panggilan": "tututpoli"
+            },
         ];
 
         // Function untuk membersihkan dan memformat nama
@@ -1189,6 +1452,16 @@
                 .replace(/\s+/g, ' '); // Ganti multiple spasi dengan satu spasi
         }
 
+        // Function to get URL parameter
+        function getUrlParameter(name) {
+            name = name.replace(/[\[\]]/g, '\\$&');
+            var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+                results = regex.exec(window.location.href);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, ' '));
+        }
+
         // Function to validate invitation
         function validateInvitation() {
             const invitationParam = getUrlParameter('to');
@@ -1197,14 +1470,14 @@
             if (invitationParam === null) {
                 alert("Undangan tidak valid");
                 window.location.href = window.location.pathname;
-                return false;
+                return null;
             }
 
             // Jika parameter undangan kosong (ada param tapi tidak ada nilai)
             if (invitationParam === '') {
                 alert("Undangan tidak valid");
                 window.location.href = window.location.pathname;
-                return false;
+                return null;
             }
 
             // Bersihkan dan format nama dari URL
@@ -1214,21 +1487,21 @@
             if (!cleanedParam) {
                 alert("Undangan tidak valid");
                 window.location.href = window.location.pathname;
-                return false;
+                return null;
             }
 
-            // Cek apakah ada yang cocok dalam daftar valid
-            const isValid = validInvitations.some(name => {
-                return cleanedParam === name.toLowerCase();
-            });
+            // Cari tamu berdasarkan panggilan
+            const invitedGuest = validInvitations.find(guest =>
+                cleanedParam === guest.panggilan.toLowerCase()
+            );
 
-            if (!isValid) {
+            if (!invitedGuest) {
                 alert("Mohon maaf, anda tidak diundang untuk acara pernikahan pita & dhany");
                 window.location.href = window.location.pathname;
-                return false;
+                return null;
             }
 
-            return true;
+            return invitedGuest;
         }
 
         // Function untuk menangani akses tidak valid
@@ -1244,37 +1517,7 @@
         let currentUserConfirmation = null;
         let isSaveDateCountdownInitialized = false;
         let confirmData = []; // Variabel untuk menyimpan data konfirmasi
-
-        // Function to get URL parameter
-        function getUrlParameter(name) {
-            name = name.replace(/[\[\]]/g, '\\$&');
-            var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
-                results = regex.exec(window.location.href);
-            if (!results) return null;
-            if (!results[2]) return '';
-            return decodeURIComponent(results[2].replace(/\+/g, ' '));
-        }
-
-        // Function to format name
-        function formatNameFromParameter(param) {
-            if (!param) return null;
-            return param.split(' ')
-                .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
-                .join(' ');
-        }
-
-        // Get and display guest name
-        const urlParams = new URLSearchParams(window.location.search);
-        const namaParam = urlParams.get('to');
-        const namaTamu = formatNameFromParameter(namaParam);
-
-        if (namaTamu) {
-            document.getElementById('greeting-text').textContent = `Kepada yth. ${namaTamu},`;
-            document.getElementById('videoGuestName').textContent = `Undangan ${namaTamu}`;
-            document.title = `The Wedding of Pita & Dhany - ${namaTamu}`;
-            // Set guest name in RSVP form if available
-            document.getElementById('guestName').value = namaTamu;
-        }
+        let invitedGuestData = null; // Variabel untuk menyimpan data tamu yang diundang
 
         // Initialize Countdown with custom layout
         simplyCountdown('.simply-countdown', {
@@ -1441,9 +1684,9 @@
 
         // Fungsi untuk memeriksa konfirmasi user
         function checkUserConfirmation() {
-            if (!namaParam) return;
+            if (!invitedGuestData) return;
 
-            const userConfirmation = confirmData.find(item => item.param === namaParam);
+            const userConfirmation = confirmData.find(item => item.param === invitedGuestData.panggilan);
 
             if (userConfirmation) {
                 currentUserConfirmation = userConfirmation;
@@ -1488,7 +1731,7 @@
             // Tambahkan param undangan ke data
             const rsvpData = {
                 name: name,
-                param: namaParam || 'unknown', // Gunakan param undangan dari URL
+                param: invitedGuestData.panggilan || 'unknown', // Gunakan param undangan dari data tamu
                 attendance: attendance,
                 message: message,
                 timestamp: new Date().toISOString()
@@ -1500,9 +1743,7 @@
             alert(`Terima kasih ${name} atas konfirmasi kehadiran!`);
 
             this.reset();
-            if (namaTamu) {
-                document.getElementById('guestName').value = namaTamu;
-            }
+            document.getElementById('guestName').value = invitedGuestData.nama;
 
             // Muat ulang daftar pesan dengan pagination
             loadMessagesWithPagination(1);
@@ -1568,18 +1809,6 @@
             document.getElementById('mapModal').style.display = 'flex';
             document.body.style.overflow = 'hidden';
         });
-        // document.getElementById('menuRSVP').addEventListener('click', function (e) {
-        //     e.preventDefault();
-        //     document.getElementById('rsvpModal').style.display = 'flex';
-        //     document.body.style.overflow = 'hidden';
-        //     loadMessagesWithPagination(1);
-        //     checkUserConfirmation();
-
-        //     // Pause music when RSVP modal is opened
-        //     backgroundMusic.pause();
-        //     musicIcon.className = 'bi bi-play-fill';
-        // });
-
 
         // Wedding Gift Menu Control
         document.getElementById('menuWeddingGift').addEventListener('click', function (e) {
@@ -1841,15 +2070,24 @@
         const musicIcon = document.getElementById('musicIcon');
         const backgroundMusic = document.getElementById('backgroundMusic');
 
-        // Autoplay music when page loads
+        // Initialize page
         document.addEventListener('DOMContentLoaded', function () {
             // Jalankan validasi undangan
-            if (!validateInvitation()) {
+            invitedGuestData = validateInvitation();
+
+            if (!invitedGuestData) {
                 return;
             }
 
-            // Lanjutkan inisialisasi lainnya jika valid
-            // initializePage();
+            // Set nama tamu untuk ditampilkan
+            document.getElementById('greeting-text').textContent = `Kepada yth. ${invitedGuestData.nama},`;
+            document.getElementById('videoGuestName').textContent = `Undangan ${invitedGuestData.nama}`;
+            document.title = `The Wedding of Pita & Dhany - ${invitedGuestData.nama}`;
+
+            // Set guest name in RSVP form
+            document.getElementById('guestName').value = invitedGuestData.nama;
+
+            // Lanjutkan inisialisasi lainnya
             backgroundMusic.volume = 0.3;
             // Try to autoplay with a user gesture
             document.body.addEventListener('click', function initMusic() {
