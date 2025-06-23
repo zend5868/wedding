@@ -31,6 +31,39 @@
             padding: 0;
             padding-bottom: 70px;
             /* Space for footer */
+            -webkit-touch-callout: none;
+            /* iOS Safari */
+            -webkit-user-select: none;
+            /* Safari */
+            -khtml-user-select: none;
+            /* Konqueror HTML */
+            -moz-user-select: none;
+            /* Firefox */
+            -ms-user-select: none;
+            /* Internet Explorer/Edge */
+            user-select: none;
+            /* Non-prefixed version */
+        }
+
+        img,
+        video {
+            pointer-events: none;
+            -webkit-user-drag: none;
+            -khtml-user-drag: none;
+            -moz-user-drag: none;
+            -o-user-drag: none;
+            user-drag: none;
+        }
+
+        .video-protector {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 999;
+            pointer-events: none;
+            background: transparent;
         }
 
         /* Hero Section with 3D Background */
@@ -2219,6 +2252,94 @@
                 // alert('Shortcut dinonaktifkan!');
             }
         });
+
+        // Tambahkan di bagian script yang sudah ada
+        // Deteksi tombol screenshot
+        document.addEventListener('keydown', function (e) {
+            // Deteksi Print Screen (Windows) atau Shift+Command+3/4 (Mac)
+            if (e.key === 'PrintScreen' ||
+                (e.key === 's' && e.altKey) ||
+                (e.shiftKey && e.metaKey && (e.key === '3' || e.key === '4'))) {
+                e.preventDefault();
+                alert('Mohon untuk tidak mengambil screenshot dari undangan ini.');
+                // Anda juga bisa menambahkan logika lain seperti menutup video
+                const videoContainer = document.getElementById('videoContainer');
+                if (videoContainer.style.display === 'flex') {
+                    document.getElementById('closeVideo').click();
+                }
+            }
+        });
+
+        // Deteksi right-click untuk mencegah save image
+        document.addEventListener('contextmenu', function (e) {
+            e.preventDefault();
+            alert('Fitur ini dinonaktifkan untuk menghormati privasi undangan.');
+        });
+
+        // Deteksi dev tools
+        (function () {
+            'use strict';
+
+            // Deteksi pembukaan dev tools
+            function detectDevTools() {
+                const widthThreshold = window.outerWidth - window.innerWidth > 160;
+                const heightThreshold = window.outerHeight - window.innerHeight > 160;
+
+                if ((widthThreshold || heightThreshold) ||
+                    (window.Firebug && window.Firebug.chrome && window.Firebug.chrome.isInitialized)) {
+                    alert(
+                        'Dev tools terdeteksi. Mohon untuk tidak mengambil screenshot atau menyalin konten dari undangan ini.'
+                    );
+                    document.body.innerHTML =
+                        '<div style="padding:20px;text-align:center;"><h1>Mohon maaf</h1><p>Anda tidak diizinkan untuk melihat kode sumber atau mengambil screenshot dari undangan ini.</p></div>';
+                }
+            }
+
+            // Cek secara berkala
+            setInterval(detectDevTools, 1000);
+        })();
+
+        // Tambahkan di script yang sudah ada
+        function addDynamicWatermark() {
+            const watermark = document.createElement('div');
+            watermark.style.position = 'fixed';
+            watermark.style.bottom = '10px';
+            watermark.style.right = '10px';
+            watermark.style.zIndex = '9999';
+            watermark.style.color = 'rgba(255,255,255,0.5)';
+            watermark.style.fontSize = '12px';
+            watermark.style.pointerEvents = 'none';
+            watermark.textContent = `Undangan ${invitedGuestData ? invitedGuestData.nama : 'Pita & Dhany'}`;
+
+            document.body.appendChild(watermark);
+
+            // Update watermark setiap 5 detik
+            setInterval(() => {
+                const now = new Date();
+                watermark.textContent =
+                    `Undangan ${invitedGuestData ? invitedGuestData.nama : 'Pita & Dhany'} - ${now.toLocaleString()}`;
+            }, 5000);
+        }
+
+        // Panggil fungsi setelah loading selesai
+        setTimeout(addDynamicWatermark, 4000);
+
+        // Tambahkan di script yang sudah ada
+        function blockMobileScreenCapture() {
+            // Deteksi perangkat mobile
+            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                document.addEventListener('visibilitychange', function () {
+                    if (document.hidden) {
+                        alert('Mohon untuk tidak mengambil screenshot dari undangan ini.');
+                        document.body.innerHTML =
+                            '<div style="padding:20px;text-align:center;"><h1>Mohon maaf</h1><p>Anda tidak diizinkan untuk mengambil screenshot dari undangan ini.</p></div>';
+                    }
+                });
+            }
+        }
+
+        // Panggil fungsi setelah loading selesai
+        setTimeout(blockMobileScreenCapture, 4000);
     </script>
 </body>
 
